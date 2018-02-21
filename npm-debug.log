@@ -1,0 +1,406 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'rm',
+1 verbose cli   '--global',
+1 verbose cli   'gulp' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly uninstall loadAllDepsIntoIdealtree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly loadIdealTree Finishing
+21 silly currentTree lib
+21 silly currentTree └─┬ gulp@3.9.1
+21 silly currentTree   ├── ansi-regex@2.1.1
+21 silly currentTree   ├── ansi-styles@2.2.1
+21 silly currentTree   ├── archy@1.0.0
+21 silly currentTree   ├── arr-diff@2.0.0
+21 silly currentTree   ├── arr-flatten@1.0.1
+21 silly currentTree   ├── array-differ@1.0.0
+21 silly currentTree   ├── array-uniq@1.0.3
+21 silly currentTree   ├── array-unique@0.2.1
+21 silly currentTree   ├── balanced-match@0.4.2
+21 silly currentTree   ├── beeper@1.1.1
+21 silly currentTree   ├── brace-expansion@1.1.6
+21 silly currentTree   ├── braces@1.8.5
+21 silly currentTree   ├── buffer-shims@1.0.0
+21 silly currentTree   ├── chalk@1.1.3
+21 silly currentTree   ├── clone-stats@0.0.1
+21 silly currentTree   ├── clone@1.0.2
+21 silly currentTree   ├── concat-map@0.0.1
+21 silly currentTree   ├── core-util-is@1.0.2
+21 silly currentTree   ├── dateformat@2.0.0
+21 silly currentTree   ├── defaults@1.0.3
+21 silly currentTree   ├── deprecated@0.0.1
+21 silly currentTree   ├── detect-file@0.1.0
+21 silly currentTree   ├── duplexer2@0.0.2
+21 silly currentTree   ├── end-of-stream@0.1.5
+21 silly currentTree   ├── escape-string-regexp@1.0.5
+21 silly currentTree   ├── expand-brackets@0.1.5
+21 silly currentTree   ├── expand-range@1.8.2
+21 silly currentTree   ├── expand-tilde@1.2.2
+21 silly currentTree   ├── extend@3.0.0
+21 silly currentTree   ├── extglob@0.3.2
+21 silly currentTree   ├── fancy-log@1.3.0
+21 silly currentTree   ├── filename-regex@2.0.0
+21 silly currentTree   ├── fill-range@2.2.3
+21 silly currentTree   ├── find-index@0.1.1
+21 silly currentTree   ├── findup-sync@0.4.3
+21 silly currentTree   ├── fined@1.0.2
+21 silly currentTree   ├── first-chunk-stream@1.0.0
+21 silly currentTree   ├── flagged-respawn@0.3.2
+21 silly currentTree   ├── for-in@1.0.2
+21 silly currentTree   ├── for-own@0.1.5
+21 silly currentTree   ├── fs-exists-sync@0.1.0
+21 silly currentTree   ├── gaze@0.5.2
+21 silly currentTree   ├── glob-base@0.3.0
+21 silly currentTree   ├── glob-parent@2.0.0
+21 silly currentTree   ├─┬ glob-stream@3.1.18
+21 silly currentTree   │ ├── readable-stream@1.0.34
+21 silly currentTree   │ └── through2@0.6.5
+21 silly currentTree   ├── glob-watcher@0.0.6
+21 silly currentTree   ├── glob@4.5.3
+21 silly currentTree   ├── glob2base@0.0.12
+21 silly currentTree   ├── global-modules@0.2.3
+21 silly currentTree   ├── global-prefix@0.1.5
+21 silly currentTree   ├─┬ globule@0.1.0
+21 silly currentTree   │ ├── glob@3.1.21
+21 silly currentTree   │ ├── graceful-fs@1.2.3
+21 silly currentTree   │ ├── inherits@1.0.2
+21 silly currentTree   │ └── minimatch@0.2.14
+21 silly currentTree   ├── glogg@1.0.0
+21 silly currentTree   ├── graceful-fs@3.0.11
+21 silly currentTree   ├── gulp-util@3.0.8
+21 silly currentTree   ├── gulplog@1.0.0
+21 silly currentTree   ├── has-ansi@2.0.0
+21 silly currentTree   ├── has-gulplog@0.1.0
+21 silly currentTree   ├── homedir-polyfill@1.0.1
+21 silly currentTree   ├── inflight@1.0.6
+21 silly currentTree   ├── inherits@2.0.3
+21 silly currentTree   ├── ini@1.3.4
+21 silly currentTree   ├── interpret@1.0.1
+21 silly currentTree   ├── is-absolute@0.2.6
+21 silly currentTree   ├── is-buffer@1.1.4
+21 silly currentTree   ├── is-dotfile@1.0.2
+21 silly currentTree   ├── is-equal-shallow@0.1.3
+21 silly currentTree   ├── is-extendable@0.1.1
+21 silly currentTree   ├── is-extglob@1.0.0
+21 silly currentTree   ├── is-glob@2.0.1
+21 silly currentTree   ├── is-number@2.1.0
+21 silly currentTree   ├── is-posix-bracket@0.1.1
+21 silly currentTree   ├── is-primitive@2.0.0
+21 silly currentTree   ├── is-relative@0.2.1
+21 silly currentTree   ├── is-unc-path@0.1.2
+21 silly currentTree   ├── is-utf8@0.2.1
+21 silly currentTree   ├── is-windows@0.2.0
+21 silly currentTree   ├── isarray@0.0.1
+21 silly currentTree   ├── isexe@1.1.2
+21 silly currentTree   ├─┬ isobject@2.1.0
+21 silly currentTree   │ └── isarray@1.0.0
+21 silly currentTree   ├── kind-of@3.1.0
+21 silly currentTree   ├── liftoff@2.3.0
+21 silly currentTree   ├── lodash._basecopy@3.0.1
+21 silly currentTree   ├── lodash._basetostring@3.0.1
+21 silly currentTree   ├── lodash._basevalues@3.0.0
+21 silly currentTree   ├── lodash._getnative@3.9.1
+21 silly currentTree   ├── lodash._isiterateecall@3.0.9
+21 silly currentTree   ├── lodash._reescape@3.0.0
+21 silly currentTree   ├── lodash._reevaluate@3.0.0
+21 silly currentTree   ├── lodash._reinterpolate@3.0.0
+21 silly currentTree   ├── lodash._root@3.0.1
+21 silly currentTree   ├── lodash.assignwith@4.2.0
+21 silly currentTree   ├── lodash.escape@3.2.0
+21 silly currentTree   ├── lodash.isarguments@3.1.0
+21 silly currentTree   ├── lodash.isarray@3.0.4
+21 silly currentTree   ├── lodash.isempty@4.4.0
+21 silly currentTree   ├── lodash.isplainobject@4.0.6
+21 silly currentTree   ├── lodash.isstring@4.0.1
+21 silly currentTree   ├── lodash.keys@3.1.2
+21 silly currentTree   ├── lodash.mapvalues@4.6.0
+21 silly currentTree   ├── lodash.pick@4.4.0
+21 silly currentTree   ├── lodash.restparam@3.6.1
+21 silly currentTree   ├── lodash.template@3.6.2
+21 silly currentTree   ├── lodash.templatesettings@3.1.1
+21 silly currentTree   ├── lodash@1.0.2
+21 silly currentTree   ├── lru-cache@2.7.3
+21 silly currentTree   ├── map-cache@0.2.2
+21 silly currentTree   ├── micromatch@2.3.11
+21 silly currentTree   ├── minimatch@2.0.10
+21 silly currentTree   ├── minimist@1.2.0
+21 silly currentTree   ├─┬ mkdirp@0.5.1
+21 silly currentTree   │ └── minimist@0.0.8
+21 silly currentTree   ├── multipipe@0.1.2
+21 silly currentTree   ├── natives@1.1.0
+21 silly currentTree   ├── normalize-path@2.0.1
+21 silly currentTree   ├── object-assign@3.0.0
+21 silly currentTree   ├── object.omit@2.0.1
+21 silly currentTree   ├── once@1.3.3
+21 silly currentTree   ├── orchestrator@0.3.8
+21 silly currentTree   ├── ordered-read-streams@0.1.0
+21 silly currentTree   ├── os-homedir@1.0.2
+21 silly currentTree   ├── parse-filepath@1.0.1
+21 silly currentTree   ├── parse-glob@3.0.4
+21 silly currentTree   ├── parse-passwd@1.0.0
+21 silly currentTree   ├── path-parse@1.0.5
+21 silly currentTree   ├── path-root-regex@0.1.2
+21 silly currentTree   ├── path-root@0.1.1
+21 silly currentTree   ├── preserve@0.2.0
+21 silly currentTree   ├── pretty-hrtime@1.0.3
+21 silly currentTree   ├── process-nextick-args@1.0.7
+21 silly currentTree   ├── randomatic@1.1.6
+21 silly currentTree   ├── readable-stream@1.1.14
+21 silly currentTree   ├── rechoir@0.6.2
+21 silly currentTree   ├── regex-cache@0.4.3
+21 silly currentTree   ├── repeat-element@1.1.2
+21 silly currentTree   ├── repeat-string@1.6.1
+21 silly currentTree   ├── replace-ext@0.0.1
+21 silly currentTree   ├── resolve-dir@0.1.1
+21 silly currentTree   ├── resolve@1.3.2
+21 silly currentTree   ├── semver@4.3.6
+21 silly currentTree   ├── sequencify@0.0.7
+21 silly currentTree   ├── sigmund@1.0.1
+21 silly currentTree   ├── sparkles@1.0.0
+21 silly currentTree   ├── stream-consume@0.1.0
+21 silly currentTree   ├── string_decoder@0.10.31
+21 silly currentTree   ├── strip-ansi@3.0.1
+21 silly currentTree   ├── strip-bom@1.0.0
+21 silly currentTree   ├── supports-color@2.0.0
+21 silly currentTree   ├─┬ through2@2.0.3
+21 silly currentTree   │ ├── isarray@1.0.0
+21 silly currentTree   │ └── readable-stream@2.2.3
+21 silly currentTree   ├── tildify@1.2.0
+21 silly currentTree   ├── time-stamp@1.0.1
+21 silly currentTree   ├── unc-path-regex@0.1.2
+21 silly currentTree   ├── unique-stream@1.0.0
+21 silly currentTree   ├── user-home@1.1.1
+21 silly currentTree   ├── util-deprecate@1.0.2
+21 silly currentTree   ├── v8flags@2.0.11
+21 silly currentTree   ├─┬ vinyl-fs@0.3.14
+21 silly currentTree   │ ├── clone@0.2.0
+21 silly currentTree   │ ├── readable-stream@1.0.34
+21 silly currentTree   │ ├── through2@0.6.5
+21 silly currentTree   │ └── vinyl@0.4.6
+21 silly currentTree   ├── vinyl@0.5.3
+21 silly currentTree   ├── which@1.2.12
+21 silly currentTree   ├── wrappy@1.0.2
+21 silly currentTree   └── xtend@4.0.1
+22 silly idealTree lib
+23 silly generateActionsToTake Starting
+24 silly install generateActionsToTake
+25 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/ansi-regex
+26 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/ansi-styles
+27 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/arr-flatten
+28 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/arr-diff
+29 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/array-differ
+30 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/array-uniq
+31 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/array-unique
+32 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/balanced-match
+33 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/beeper
+34 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/buffer-shims
+35 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/clone
+36 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/clone-stats
+37 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/concat-map
+38 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/brace-expansion
+39 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/core-util-is
+40 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/dateformat
+41 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/defaults
+42 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/escape-string-regexp
+43 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/extend
+44 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/filename-regex
+45 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/find-index
+46 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/first-chunk-stream
+47 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/flagged-respawn
+48 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/for-in
+49 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/for-own
+50 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/fs-exists-sync
+51 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/detect-file
+52 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob2base
+53 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/globule/node_modules/graceful-fs
+54 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/globule/node_modules/inherits
+55 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/has-ansi
+56 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/inherits
+57 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/ini
+58 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-buffer
+59 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-dotfile
+60 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-extendable
+61 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-extglob
+62 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/extglob
+63 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-glob
+64 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-parent
+65 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-base
+66 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-posix-bracket
+67 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/expand-brackets
+68 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-primitive
+69 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-equal-shallow
+70 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-utf8
+71 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-windows
+72 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/isarray
+73 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/isexe
+74 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/isobject/node_modules/isarray
+75 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/isobject
+76 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/kind-of
+77 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-number
+78 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash
+79 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._basecopy
+80 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._basetostring
+81 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._basevalues
+82 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._getnative
+83 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._isiterateecall
+84 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._reescape
+85 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._reevaluate
+86 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._reinterpolate
+87 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash._root
+88 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.assignwith
+89 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.escape
+90 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.isarguments
+91 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.isarray
+92 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.isempty
+93 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.isplainobject
+94 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.isstring
+95 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.keys
+96 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.mapvalues
+97 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.pick
+98 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.restparam
+99 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.templatesettings
+100 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lodash.template
+101 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/lru-cache
+102 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/map-cache
+103 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/minimatch
+104 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/minimist
+105 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/mkdirp/node_modules/minimist
+106 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/mkdirp
+107 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/natives
+108 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/graceful-fs
+109 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/normalize-path
+110 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/object-assign
+111 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/object.omit
+112 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/ordered-read-streams
+113 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/os-homedir
+114 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/expand-tilde
+115 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/parse-glob
+116 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/parse-passwd
+117 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/homedir-polyfill
+118 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/path-parse
+119 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/path-root-regex
+120 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/path-root
+121 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/preserve
+122 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/process-nextick-args
+123 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/randomatic
+124 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/regex-cache
+125 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/repeat-element
+126 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/repeat-string
+127 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/fill-range
+128 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/expand-range
+129 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/braces
+130 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/micromatch
+131 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/replace-ext
+132 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/resolve
+133 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/rechoir
+134 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/sequencify
+135 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/sigmund
+136 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/globule/node_modules/minimatch
+137 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/globule/node_modules/glob
+138 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/globule
+139 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/gaze
+140 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-watcher
+141 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/sparkles
+142 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glogg
+143 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/gulplog
+144 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/has-gulplog
+145 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/stream-consume
+146 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/string_decoder
+147 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-stream/node_modules/readable-stream
+148 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/readable-stream
+149 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/duplexer2
+150 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/multipipe
+151 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/strip-ansi
+152 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/strip-bom
+153 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/supports-color
+154 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/chalk
+155 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/through2/node_modules/isarray
+156 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/time-stamp
+157 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/fancy-log
+158 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/unc-path-regex
+159 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-unc-path
+160 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-relative
+161 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/is-absolute
+162 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/parse-filepath
+163 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/fined
+164 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/unique-stream
+165 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/user-home
+166 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/util-deprecate
+167 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/through2/node_modules/readable-stream
+168 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl
+169 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl-fs/node_modules/clone
+170 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl-fs/node_modules/readable-stream
+171 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl-fs/node_modules/vinyl
+172 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/which
+173 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/global-prefix
+174 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/global-modules
+175 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/resolve-dir
+176 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/findup-sync
+177 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/wrappy
+178 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/once
+179 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/end-of-stream
+180 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/inflight
+181 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob
+182 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/xtend
+183 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-stream/node_modules/through2
+184 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-stream
+185 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/through2
+186 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl-fs/node_modules/through2
+187 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/archy
+188 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/deprecated
+189 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/gulp-util
+190 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/interpret
+191 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/liftoff
+192 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/orchestrator
+193 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/pretty-hrtime
+194 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/semver
+195 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/tildify
+196 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/v8flags
+197 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl-fs
+198 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp
+199 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules
+200 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/globule/node_modules
+201 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/isobject/node_modules
+202 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/mkdirp/node_modules
+203 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/glob-stream/node_modules
+204 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/through2/node_modules
+205 warn checkPermissions Missing write access to /usr/local/lib/node_modules/gulp/node_modules/vinyl-fs/node_modules
+206 silly rollbackFailedOptional Starting
+207 silly rollbackFailedOptional Finishing
+208 silly runTopLevelLifecycles Finishing
+209 silly install printInstalled
+210 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules/gulp/node_modules/ansi-regex'
+211 verbose cwd /Applications/MAMP/htdocs/jonathan/DATABLOG
+212 error Darwin 16.7.0
+213 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "rm" "--global" "gulp"
+214 error node v7.7.0
+215 error npm  v4.1.2
+216 error path /usr/local/lib/node_modules/gulp/node_modules/ansi-regex
+217 error code EACCES
+218 error errno -13
+219 error syscall access
+220 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules/gulp/node_modules/ansi-regex'
+220 error  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules/gulp/node_modules/ansi-regex'
+220 error   errno: -13,
+220 error   code: 'EACCES',
+220 error   syscall: 'access',
+220 error   path: '/usr/local/lib/node_modules/gulp/node_modules/ansi-regex' }
+221 error Please try running this command again as root/Administrator.
+222 verbose exit [ -13, true ]
