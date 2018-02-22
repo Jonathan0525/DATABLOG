@@ -1,11 +1,92 @@
 /*MIS ESTILOS*/
+.bc-usuarios-registrese {
+    background: url(../img/bg/bg-registrese.jpeg);
+    background-size: cover;
+    background-position: 50%;
+}
+.footer1 ul li a svg {
+    color: #06acec;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.footer1 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer1 ul
+ li a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer1 ul
+ li {
+    list-style: none;
+}
+
+.footer1 h2 {
+    color: white;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.footer1 p {
+    color: #fff;
+    font-size: 16px;
+}
+
 a.navbar-brand img {
   width: 191px;
   padding: 0px;
 }
 
+.footer2 h6 {
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    font-size: 12px;
+}
+.redes {
+    display: flex;
+}
+.redes a {
+    margin: 4px;
+}
+.redes a img {
+    margin: 10px;
+    width: 70%;
+}
+.container-fluid.footers {
+    background: #003153;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.footer1 {
+    background: #003153;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer2 {
+    background: #04aceb;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .menu_btns {
-    padding: 30px;
+    padding: 30px 0px 30px 20px;
     background: #003253;
 }
 
@@ -71,7 +152,7 @@ a.navbar-brand img {
 .btns {
   display: flex;
   align-items: center;
-  margin-left: 20px;
+
 }
 
 .btns_categories {
@@ -149,10 +230,41 @@ li.nav-item a {
     padding: 0px !important;
     background: #ffffff !important;
   }
+  button.navbar-toggler {
+    margin-left: 10px;
+    background: #06acec;
+}
+.menu {
+    width: 100%;
+    max-width: 100%;
+}
 }
 
 /*--------- MOVIL ---------*/
 @media screen and (max-width: 768px) {
+  .redes a img {
+    margin: 10px;
+    width: 55%;
+}
+.redes {
+    margin-top: 18px;
+    padding-top: 10px;
+    display: flex;
+    border-top: solid rgba(255, 255, 255, 0.25) 1px;
+}
+.footer1 {
+    background: #003153;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.redes a {
+    margin: 4px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   .btns {
     display: flex;
     align-items: start;
