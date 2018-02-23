@@ -32,17 +32,37 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Consulta un Articulo" aria-label="Search">
       <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
     </form>
-
+@if (Auth::guest())
     <ul class="navbar-nav btns">
      <li class="nav-item">
-        <a class="nav-link" href="#">Acceder</a>
+        <a class="nav-link" href="{{ url('/login') }}">Acceder</a>
       </li>
       <span>|</span>
      <li class="nav-item">
-        <a class="nav-link" href="#">Registrarse</a>
+        <a class="nav-link" href="{{ url('/register') }}">Registrarse</a>
       </li>
     </ul>
+@else
+<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
 
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Salir
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+@endif
     </div>
 
   </div>

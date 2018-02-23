@@ -373,6 +373,39 @@ li.nav-item a {
 
 /*--------- MOVIL ---------*/
 @media screen and (max-width: 768px) {
+  a.facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2950a5;
+    width: 90%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #fff;
+    transition: all ease .8s;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+a.facebook:hover {
+  box-shadow: 0px 0px 3px 1px #c8cbd2;
+  font-weight: 200;
+  font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    width: 90%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #2950a5;
+    transition: all ease .8s;
+}
   .registrese_form {
     background: #fff;
     box-shadow: 0px 0px 6px 0px rgba(0, 50, 83, 0.21);
