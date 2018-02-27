@@ -22,7 +22,7 @@ class UserController extends Controller
 		$user->password = bcrypt($request->password);
 		$user->save();
 
-		return view('welcome');
+		return view('auth.login');
 		
 
 	}

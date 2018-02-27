@@ -5,7 +5,7 @@
    <div class="container" >
       <div class="row justify-content-center">
          <div class="col-sm-12 col-md-10 col-lg-8 registrese_form">
-            <h1>REGISTRARSE</h1>
+            <h1>REGISTRAaRSE</h1>
             <p>Regístrese en nuestra plataforma para
                tener el acceso completo a los proyectos
             </p>
