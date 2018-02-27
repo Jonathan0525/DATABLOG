@@ -1,5 +1,54 @@
 /*MIS ESTILOS*/
 
+.option_dash {
+    border-radius: 0px !important;
+    background: #f9f9f9;
+    display: flex;
+    height: 120px;
+    border-bottom: 1px solid rgba(80, 80, 80, 0.16);
+    align-items: center;
+    justify-content: center;
+    color: #a9a9a9;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: all ease .8s;
+}
+
+.option_dash:hover {
+    border-radius: 0px !important;
+    background: #003153;
+    display: flex;
+   
+    border-bottom: 1px solid rgba(80, 80, 80, 0.16);
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: all ease .8s;
+}
+
+.option_dash.active {
+    background: #003153 !important;
+    transition: all ease .8s;
+}
+
+
+.btns_dash {
+    padding: 0px;
+}
+
+.dashboard {
+    background: #fff;
+    box-shadow: 0px 0px 6px 0px rgba(0, 50, 83, 0.21);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    display: block;
+}
+
+
 ul.dropdown-menu.show li a {
     display: flex;
     /* background: red; */
@@ -207,6 +256,14 @@ form.myform {
     background-size: cover;
     background-position: 50%;
 }
+
+.bc-dashboard {
+    background: url(../img/bg/bg-dashboard.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+
 .footer1 ul li a svg {
     color: #06acec;
     font-size: 20px;
@@ -369,6 +426,21 @@ a.navbar-brand img {
 /*--------- LAPTOP ---------*/
 @media screen and (max-width: 991px) {
 
+    .btns_dash_in {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.btns_dash_in a {
+    width: 50%;
+}
+
+.btns_dash_in a {
+    width: 50%;
+    height: 62px;
+    border-left: solid 1px #dedede;
+}
+
   form.form-inline.mr-sm-2 {
     display: flex;
     flex-direction: row;
@@ -445,6 +517,21 @@ li.nav-item a {
 
 /*--------- MOVIL ---------*/
 @media screen and (max-width: 768px) {
+
+    .btns_dash_in a {
+    width: 50%;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 18px;
+}
+    .btns_dash_in {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.btns_dash_in a {
+    width: 50%;
+}
   a.facebook {
     display: flex;
     align-items: center;
