@@ -45,11 +45,13 @@
             @else
             <li class="dropdown user_on">
                <a href="#" class="dropdown-toggle T" data-toggle="dropdown" role="button" aria-expanded="false">
-               !Hola {{ Auth::user()->name }} <span class="caret"></span>
+               !Ey {{ Auth::user()->name }} <span class="caret"></span>
                </a>
                <ul class="dropdown-menu" role="menu">
                   <li>
-                     <a href="{{ url('/dashboard') }}">DashBoard</a>
+                     <a href="/dashboard/{{ Auth::user()->id }}/edit">Dashboard</a>
+                 
+                     
                   </li>
                   <li>
                      <a href="{{ url('/logout') }}"
@@ -69,3 +71,21 @@
       </div>
    </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

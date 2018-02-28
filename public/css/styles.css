@@ -1,5 +1,22 @@
 /*MIS ESTILOS*/
 
+
+.form_act {
+    margin: 10px;
+}
+.info_user_name h2 {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.info_user_name h3 {
+    color: #02aad4;
+    font-weight: 200;
+    font-size: 18px;
+}
+
 .option_dash {
     border-radius: 0px !important;
     background: #f9f9f9;
@@ -14,6 +31,13 @@
     font-weight: 200;
     text-transform: uppercase;
     transition: all ease .8s;
+}
+
+.info_user_name {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
 
 .option_dash:hover {
@@ -262,7 +286,11 @@ form.myform {
     background-size: cover;
     background-position: 50%;
 }
-
+.header_perfil {
+    background: url(../img/bg/bg-user-dashboard.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
 
 .footer1 ul li a svg {
     color: #06acec;
@@ -423,8 +451,19 @@ a.navbar-brand img {
     text-decoration: none;
     background-color: #00325361;
 }
+
+/*--------- SEMILARGE ---------*/
+@media screen and (max-width: 1200px) {
+    .menu {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+}
+
 /*--------- LAPTOP ---------*/
 @media screen and (max-width: 991px) {
+
 
     .btns_dash_in {
     display: flex;
@@ -517,6 +556,20 @@ li.nav-item a {
 
 /*--------- MOVIL ---------*/
 @media screen and (max-width: 768px) {
+
+.header_perfil {
+    background: url(../img/bg/bg-user-dashboard.jpg);
+    background-size: cover;
+    background-position: 50%;
+    text-align: center;
+}
+.info_user_name h2 {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    text-transform: uppercase;
+}
 
     .btns_dash_in a {
     width: 50%;

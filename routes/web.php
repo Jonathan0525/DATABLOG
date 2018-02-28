@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dashboard', function () {
+/*Route::get('dashboard', function () {
     return view('template.user.dashboard');
-});
+});*/
 
-/*
-Route::group(['prefix' => 'user'], function(){
+
+/*Route::group(['prefix' => 'user'], function(){
 
 	Route::resource('user','UserController');
 
@@ -30,15 +30,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::resource('/dashboard','DashboardControllerr');
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Route::resource('dashboard','DashboardControllerr');
-
+Route::get('dashboard', function () {
+    return view('dashboard.index');
+});
 

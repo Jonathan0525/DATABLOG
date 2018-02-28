@@ -1,8 +1,13 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
+use App\Http\Controllers\Controller;
+use App\User;
+use Laracasts\Flash\Flash;
 
 class DashboardControllerr extends Controller
 {
@@ -13,7 +18,7 @@ class DashboardControllerr extends Controller
      */
     public function index()
     {
-        return view('template.user.dashboard');
+        return view('dashboard.index');
     }
 
     /**
@@ -56,7 +61,8 @@ class DashboardControllerr extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('dashboard.index')->with('user', $user);
     }
 
     /**
@@ -68,7 +74,14 @@ class DashboardControllerr extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+       
+        
+
+        return view('dashboard.index')->with('user', $user);
     }
 
     /**
@@ -82,3 +95,29 @@ class DashboardControllerr extends Controller
         //
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
