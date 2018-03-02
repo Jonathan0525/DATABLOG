@@ -49,8 +49,8 @@
                </a>
                <ul class="dropdown-menu" role="menu">
                   <li>
-                     <a href="/dashboard/{{ Auth::user()->id }}/edit">Dashboard</a>
-                 
+                     <!--<a href="/dashboard/user/{{ Auth::user()->id }}/edit">Dashboard</a>-->
+                        <a href="/dashboard/user">Dashboard</a>
                      
                   </li>
                   <li>

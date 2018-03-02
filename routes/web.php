@@ -20,20 +20,33 @@ Route::get('/', function () {
 });*/
 
 
-/*Route::group(['prefix' => 'user'], function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
 
 	Route::resource('user','UserController');
 
-});*/
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
 
-Route::resource('/dashboard','DashboardControllerr');
+/*Route::group(['middleware' => 'auth'], function() {
+  Route::resource('/dashboard', 'DashboardControllerr');
+});*/
 
-Route::get('dashboard', function () {
-    return view('dashboard.index');
-});
+
+/*Route::resource('/dashboard', 'DashboardControllerr');*/
+
+/*
+Route::resource('/dashboard','DashboardControllerr');
+*/
+
+/*
+Route::get('dashboard/{id}', function ($id) {
+    return 'dashboard '.$id;
+})->middleware('auth');
+
+*/
+
 

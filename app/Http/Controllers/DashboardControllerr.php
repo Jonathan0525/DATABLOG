@@ -3,11 +3,15 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Redirector;
 use App\User;
 use Laracasts\Flash\Flash;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class DashboardControllerr extends Controller
 {
@@ -18,8 +22,14 @@ class DashboardControllerr extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+
+         return view('welcome');
     }
+
+
+ 
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +49,7 @@ class DashboardControllerr extends Controller
      */
     public function store(Request $request)
     {
-        
+       
     }
 
     /**
@@ -50,7 +60,8 @@ class DashboardControllerr extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('dashboard.index')->with('user', $user);
     }
 
     /**
@@ -61,8 +72,12 @@ class DashboardControllerr extends Controller
      */
     public function edit($id)
     {
+        //dd('edit');
         $user = User::find($id);
-        return view('dashboard.index')->with('user', $user);
+        return view('dashboard.edit')->with('user', $user);
+
+         
+        
     }
 
     /**
@@ -74,14 +89,17 @@ class DashboardControllerr extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
+        dd('update');
+       /* $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->save();
-       
-        
+        $user->save();*/
 
-        return view('dashboard.index')->with('user', $user);
+        //redirect('/dashboard/'. $id .'/edit');
+       
+        //return view('dashboard.index')->with('user', $user);
+
+        /*return view('/dashboard/index')->with('user', $user);*/
     }
 
     /**
@@ -94,6 +112,12 @@ class DashboardControllerr extends Controller
     {
         //
     }
+
+
+
+
+
+
 }
 
 

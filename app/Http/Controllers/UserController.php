@@ -15,14 +15,15 @@ class UserController extends Controller
 	public function index()
     {
 
-        return view('dashboard.index')->with('user', $users);;
+        $user = User::orderBy('id', 'ASC')->paginate(5);
+        return view('dashboard.user.index')->with('user', $user);;
     }
 
 
     public function edit($id)
     {
-
-        dd('estas');
+        $user = User::find($id);
+        return view('dashboard.user.edit')->with('user', $user);
     }
 
 	public function create(){
@@ -30,6 +31,26 @@ class UserController extends Controller
 		return view('template.user.create');
 
 	}
+
+    public function update(Request $request, $id)
+    {
+        
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        flash('!Ey <b>' . $user->name . '</b> has actualizado la información con exito!')->success();
+
+        return redirect()->route('user.index');
+
+        //redirect('/dashboard/'. $id .'/edit');
+       
+        //return view('dashboard.index')->with('user', $user);
+
+        /*return view('/dashboard/index')->with('user', $user);*/
+    }
+
 
 	public function store(Request $request){
 
@@ -53,10 +74,7 @@ class UserController extends Controller
         //
     }
 
-	public function __construct()
-    {
-        $this->middleware('guest', ['except' => 'logout']);
-    }
+	
 
 
 }

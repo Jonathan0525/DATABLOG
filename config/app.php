@@ -179,11 +179,13 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 
+
         /*
         *mis providers
         */
 
         'Collective\Html\HtmlServiceProvider',
+         Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
@@ -238,6 +240,7 @@ return [
    
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
+        'Flash' => Laracasts\Flash\Flash::class
 
 
     ],
