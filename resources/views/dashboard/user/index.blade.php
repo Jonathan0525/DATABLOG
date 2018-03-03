@@ -24,8 +24,10 @@
                      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         
                      <div class="row header_perfil">
-                           <div class="col-sm-12 col-md-3 col-lg-3">
-                              <img src="{{ asset('img/thumb-user.png') }}">
+                           <div class="col-sm-12 col-md-3 col-lg-3 img_perfil">
+
+                              <img src="/img/bg/{{ Auth::user()->photo }}">
+
                            </div>
                            <div class="col-sm-12 col-md-9 col-lg-9 info_user_name">
                               <h2 class="name_user">{{ Auth::user()->name }}</h2>

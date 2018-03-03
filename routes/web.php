@@ -31,6 +31,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
+
+Route::post('dashboard/user/img', 'UserController@postNewImage')->name('image');
+
+
+
+
 /*Route::group(['middleware' => 'auth'], function() {
   Route::resource('/dashboard', 'DashboardControllerr');
 });*/

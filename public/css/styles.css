@@ -1,4 +1,58 @@
 /*MIS ESTILOS*/
+input[type="file"] {
+    color: white;
+}
+form.form_img {
+    /* background: red; */
+    width: 100%;
+}
+form.form_img button {
+    background: #02aad4;
+    border: none;
+    margin: 7px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-left: 0px;
+    width: 100%;
+    transition: all ease .8s;
+    font-family: roboto;
+    font-weight: 200;
+}
+
+form.form_img button:hover {
+    background: #003253;
+    font-weight: 200;
+    border: none;
+    margin: 7px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-left: 0px;
+    width: 100%;
+    transition: all ease .8s;
+    font-family: roboto;
+}
+
+
+
+
+.img_perfil img {
+    border-radius: 100%;
+    margin: 20px;
+    border: solid #01abd4;
+}
+
+.img_perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 
 
 .form_act h3 {

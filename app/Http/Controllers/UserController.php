@@ -8,6 +8,14 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Laracasts\Flash\Flash;
 
+
+use Intervention\Image\ImageManagerStatic as Image;
+use Auth;
+use Illuminate\Http\File;
+use App\Http\Requests;
+
+
+
 class UserController extends Controller
 {
 
@@ -15,8 +23,11 @@ class UserController extends Controller
 	public function index()
     {
 
-        $user = User::orderBy('id', 'ASC')->paginate(5);
-        return view('dashboard.user.index')->with('user', $user);;
+
+        $user = User::all();
+        return view('dashboard.user.index')->with('user', $user);
+
+
     }
 
 
@@ -74,7 +85,67 @@ class UserController extends Controller
         //
     }
 
-	
+    /*public function getPhotoRouteAttribute() {
+
+       if ($this->photo)
+
+        return '/Applications/MAMP/htdocs/jonathan/DATABLOG/resources/views/dashboard/img/users/'.$this->id.'.'.$this->photo;
+
+        return '/Applications/MAMP/htdocs/jonathan/DATABLOG/resources/views/dashboard/img/users/d.png';
+
+    }*/
+
+    public function postNewImage(Request $request) {
+
+        /*$this->validate($request, [
+            'photo' => 'required|image'
+        ]);
+
+        $user = Auth::user();
+        
+        $extension = $request->file('photo')->getClientOriginalExtension();
+        $file_name = $user->id . '.' . $extension;
+
+
+        //dd($file_name);
+
+        Image::make($request->file('photo'))
+            ->resize(144, 144)
+            ->save('public/img/bg/' . $file_name);
+
+
+        $user->photo = $file_name;
+        $user->save();
+        */
+
+        if($request->hasFile('photo')){
+            $photo = $request->file('photo');
+            $user = Auth::user();
+            $file_name = $user->id . '.' . $photo->getClientOriginalExtension();
+
+            Image::make($photo)->resize(144, 144)->save( public_path('/img/bg/' . $file_name));
+            
+            
+            $user->photo = $file_name;
+            $user->save();
+
+        }
+        
+        
+        flash('!Ey <b>' . $user->name . '</b> subiste tu foto con exito!')->success();
+
+        return redirect()->route('user.index');
+
+        }    
 
 
 }
+
+
+
+
+
+
+
+
+
