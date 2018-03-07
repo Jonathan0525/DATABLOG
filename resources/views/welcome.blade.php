@@ -9,6 +9,7 @@
       <div class="row justify-content-center">
          <div class="col-sm-12 col-md-10 col-lg-8 registrese_form">
          	<h1>Bienvenido</h1>
+         	<a href="{{ config('contants.home') }}">Google</a>
          	<img src="{{ asset('img/logo.png') }}">
          </div>
 	</div>

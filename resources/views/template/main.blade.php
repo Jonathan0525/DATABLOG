@@ -20,18 +20,31 @@
 
 
 	<section>
+		
 		@yield('content')
 	</section>
 
 
 	@include('template.partials.footer')
 
-	<script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
-	
+ <script>
+$(document).ready(function(){
+   
+        $("#categorias_publicas").load("../template/partials/menu");
+
+});
+
+$(document).ready(function(){
+   
+        $("#categorias_privado").load("../template/partials/menu");
+
+});
+</script>
 
 </body>
 </html>

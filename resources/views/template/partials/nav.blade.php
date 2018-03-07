@@ -1,10 +1,10 @@
 <script type="text/javascript">$('.dropdown-toggle').dropdown()</script>
 <!-- Scripts -->
-    <script>
-        window.DataBlog = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
+<script>
+   window.DataBlog = <?php echo json_encode([
+      'csrfToken' => csrf_token(),
+      ]); ?>
+</script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
    <div class="container d-flex flex-column flex-md-row justify-content-between menu">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,11 +16,19 @@
             <li class="nav-item dropdown ">
                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorías</a>
                <div class="dropdown-menu btns_categories">
-                  <a class="dropdown-item" href="#">Data</a>
-                  <a class="dropdown-item" href="#">Estadistica</a>
-                  <a class="dropdown-item" href="#">Ciencias</a>
+                  <!-- <a class="dropdown-item" href="#">Data</a>
+                     <a class="dropdown-item" href="#">Estadistica</a>
+                     <a class="dropdown-item" href="#">Ciencias</a>-->
+                  @if (Auth::guest())
+                  <div id="categorias_publicas">
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  @else
+                  <div id="categorias_privado">
+                  </div>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Crear Categoría</a>
+                  @endif
                </div>
             </li>
             <li class="nav-item">
@@ -50,8 +58,7 @@
                <ul class="dropdown-menu" role="menu">
                   <li>
                      <!--<a href="/dashboard/user/{{ Auth::user()->id }}/edit">Dashboard</a>-->
-                        <a href="/dashboard/user">Dashboard</a>
-                     
+                     <a href="/dashboard/user">Dashboard</a>
                   </li>
                   <li>
                      <a href="{{ url('/logout') }}"
@@ -63,7 +70,6 @@
                         {{ csrf_field() }}
                      </form>
                   </li>
-                  
                </ul>
             </li>
             @endif
@@ -71,21 +77,3 @@
       </div>
    </div>
 </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

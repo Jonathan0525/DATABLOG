@@ -25,7 +25,7 @@
                                 
                                     <input type="file" class="" id="" name="photo" required>
                                    <button type="submit">
-                                      Actualíza
+                                      ACTUALIZAR
                                    </button>
                               </form>
                            </div>

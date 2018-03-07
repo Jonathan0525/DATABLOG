@@ -11,18 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'as' => 'welcome',
+	'uses' => 'FrontController@index'
+]);
 
-/*Route::get('dashboard', function () {
-    return view('template.user.dashboard');
-});*/
+Route::get('/template/partials/menu', 'TestController@index');
+
 
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
 
 	Route::resource('user','UserController');
+
+
+	Route::resource('categories','CategoriesController');
 
 });
 
@@ -30,29 +33,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-
-
 Route::post('dashboard/user/img', 'UserController@postNewImage')->name('image');
 
 
 
-
-/*Route::group(['middleware' => 'auth'], function() {
-  Route::resource('/dashboard', 'DashboardControllerr');
-});*/
-
-
-/*Route::resource('/dashboard', 'DashboardControllerr');*/
-
-/*
-Route::resource('/dashboard','DashboardControllerr');
-*/
-
-/*
-Route::get('dashboard/{id}', function ($id) {
-    return 'dashboard '.$id;
-})->middleware('auth');
-
-*/
 
 

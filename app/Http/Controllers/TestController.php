@@ -3,20 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
+use App\Category;
 
 class TestController extends Controller
 {
   
-  public function view($id)  {
-  	$article = Article::find($id);
+  public function index()
+    {
 
-  	$article->category;
-  	$article->user;
-  	$article->tags;
+    $categories = Category::orderBy('id', 'ASC')->paginate();
+	return view('template.partials.menu')->with('categories', $categories);
 
-  	return view('test.index', ['article' => $article]);
-  	
-  }
+
+    }
 
 }
