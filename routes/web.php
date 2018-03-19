@@ -23,9 +23,14 @@ Route::get('/template/partials/menu', 'TestController@index');
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
 
 	Route::resource('user','UserController');
-
-
 	Route::resource('categories','CategoriesController');
+
+	Route::resource('tags', 'TagsController');
+	Route::get('tags/{id}/destroy', [
+		'uses'  => 'TagsController@destroy',
+		'as'	=> 'dashboard.tags.destroy'
+
+	]);
 
 });
 
