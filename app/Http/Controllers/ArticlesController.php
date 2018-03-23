@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
 use App\Tag;
+use App\Imagen;
+use App\Http\Requests\ArticleRequest;
 
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\File;
@@ -17,8 +19,8 @@ class ArticlesController extends Controller
     public function index()
     {
 
-    $tags = Tag::orderBy('id', 'DESC')->paginate(5);
-	return view('dashboard.articles.index')->with('tags', $tags);
+    
+	return view('dashboard.articles.index');
 
 
     }
@@ -56,13 +58,34 @@ class ArticlesController extends Controller
     }
 
 
-	public function store(Request $request){
+	public function store(ArticleRequest $request){
 
-	$file = $request->file('image');
-	$name = 'datablog' . time() . '.' . $file->getClientOriginalExtension();
-	$path = public_path() . '/img/articulos/';
-	Image::make($file)->widen(300, function ($constraint) {$constraint->upsize();})->save($path . $name);
-	//$file->move($path, $name);
+	
+
+	if ($request->file('image'))
+
+	{
+		$file = $request->file('image');
+		$name = 'datablog' . time() . '.' . $file->getClientOriginalExtension();
+		$path = public_path() . '/img/articulos/';
+		Image::make($file)->widen(300, function ($constraint) {$constraint->upsize();})->save($path . $name);
+		//$file->move($path, $name);
+	}
+
+	$article = new Article($request->all());
+	$article->user_id = \Auth::user()->id;
+	$article->save();
+
+	$article->tags()->sync($request->tags);
+
+	$image = new Imagen();
+	$image->name = $name;
+	$image->article()->associate($article);
+	$image->save();
+
+	flash('Se ha creado el Artículo "'. $article->title . '" con exito!')->success()->important();
+
+	return redirect()->route('articles.index');
 
 
 	}

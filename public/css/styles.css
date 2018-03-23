@@ -419,6 +419,11 @@ form.myform {
     margin-bottom: 20px;
 }
 
+form.myformeditor {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .bc-usuarios-registrese {
     background: url(../img/bg/bg-registrese.jpeg);
