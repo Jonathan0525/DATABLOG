@@ -53,8 +53,10 @@ class TagsController extends Controller
 	$tag = new Tag($request->all());
 	$tag->save();
 
-	flash('Se ha creado el tag "'. $tag->name . '" con exito!')->success();
-	return redirect()->route('tags.index');
+	flash('Se ha creado el tag "'. $tag->name . '" con exito!')->success()->important();
+
+    return back();
+	//return redirect()->route('tags.index');
 
 
 

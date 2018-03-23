@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
 
 	]);
 
+	Route::resource('articles', 'ArticlesController');
+
 });
 
 Auth::routes();
