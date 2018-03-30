@@ -1,6 +1,140 @@
 /*MIS ESTILOS*/
 
+.btn-info {
+    color: #fff;
+    background-color: #003253;
+    border-color: #06acee;
+}
 
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0d8ec1;
+    border-color: #ffffff;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #041b29;
+    border-color: #06acee;
+}
+
+.titu h3 {
+    color: #003253;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.titu {
+    width: 100%;
+}
+
+.tags_list {display: flex;flex-wrap: wrap;}
+
+.tags_list button {
+    margin: 3px;
+}
+
+.asides {
+    margin-bottom: 24px;
+}
+
+
+.my-article p {
+    margin-bottom: 0px;
+}
+
+.my-article p b {
+    color: #01abd4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.my-article h1 {
+    color: #003253;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+.my-article {
+    padding: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+span.line {
+    width: 100%;
+    height: 2px;
+    background: #06acec;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer_number {
+    width: 100%;
+
+}
+
+
+.bc-usuarios-registresev2 {
+    background: url(../img/bg/bg-home.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+
+.box_info {
+   width: 100%;
+    height: 280px;
+    background-size: cover !important;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px rgba(0, 51, 83, 0.67);
+}
+
+.box_info img {
+    width: 100%;
+    transform: scale(1.8);
+    position: relative;
+}
+
+.info {
+    background: #003253;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.info h2 {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.info p {
+    color: #06aced;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.front-home {
+    margin-top: 60px;
+    
+    margin-bottom: 60px;
+}
 .form-control-file {
    background: #003253;
     /* padding: 10px; */
@@ -706,7 +840,25 @@ li.nav-item a {
 
 /*--------- MOVIL ---------*/
 @media screen and (max-width: 768px) {
-
+li.dropdown.user_on {
+    background: #06acec;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    border-radius: 0px;
+    transition: all ease .8s;
+}
+ul.dropdown-menu.show li a {
+    display: flex;
+    /* background: red; */
+    padding-top: .4rem;
+    height: 50px;
+    border-radius: 4px;
+    padding-bottom: .4rem;
+}
 .header_perfil {
     background: url(../img/bg/bg-user-dashboard.jpg);
     background-size: cover;

@@ -6,7 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
-        "cviebrock/eloquent-sluggable": "^4.0.4",
+        "cviebrock/eloquent-sluggable": "^4.1",
+        "doctrine/dbal": "^2.5",
         "intervention/image": "^2.4",
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.3.*",

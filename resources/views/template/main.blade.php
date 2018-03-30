@@ -30,10 +30,10 @@
 
 	@include('template.partials.footer')
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script type="text/javascript" src="{{ asset('js/all.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('chosen/chosen.jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('trumbowyg/trumbowyg.js') }}"></script>
 

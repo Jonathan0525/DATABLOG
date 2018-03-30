@@ -68,7 +68,7 @@ class ArticlesController extends Controller
 		$file = $request->file('image');
 		$name = 'datablog' . time() . '.' . $file->getClientOriginalExtension();
 		$path = public_path() . '/img/articulos/';
-		Image::make($file)->widen(300, function ($constraint) {$constraint->upsize();})->save($path . $name);
+		Image::make($file)->heighten(300, function ($constraint) {$constraint->upsize();})->save($path . $name);
 		//$file->move($path, $name);
 	}
 

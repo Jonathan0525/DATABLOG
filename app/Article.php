@@ -3,9 +3,36 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
-class Article extends Model
+
+
+
+
+class Article extends Model 
 {
+
+    use Sluggable;
+
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
+
+
+    public static function findBySlugOrFail($slug, $columns = array('*') )      
+    {          
+        if ( !is_null($slug = static::whereSlug($slug)->first($columns))) 
+        {  return $slug; }
+
+        throw new ModelNotFoundException;      
+    }
+
     protected $table = "articles";
 
     protected $fillable = ['title', 'content', 'category_id', 'user_id'];
@@ -24,7 +51,7 @@ class Article extends Model
 
     public function images() {
 
-    	return $this->hasMany('App\Image');
+    	return $this->hasMany('App\Imagen');
 
     }
 
@@ -33,4 +60,7 @@ class Article extends Model
         return $this->belongsToMany('App\Tag');
 
     }
+
+
+     
 }

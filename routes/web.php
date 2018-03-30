@@ -16,6 +16,18 @@ Route::get('/', [
 	'uses' => 'FrontController@index'
 ]);
 
+
+
+/*Route::get('dashboard/articles/{slug}', [
+	'as' => 'articles.vista',
+	'uses' => 'FrontController@viewArticle'
+])->where('slug', '[\w\d\-\_]+');*/
+
+Route::get('dashboard/articles/vista/{slug}', [
+	'as' => 'dashboard.articles.vista',
+	'uses' => 'FrontController@viewArticle'
+]);
+
 Route::get('/template/partials/menu', 'TestController@index');
 
 
