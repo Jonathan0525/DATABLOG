@@ -5,9 +5,11 @@
    </div>
    <div class="tags_list">
       @foreach($categories as $category)
+      <a href="{{ route('dashboard.search.category', $category->name) }}">
       <button type="button" class="btn btn-info">
       {{ $category->name }} <span class="badge badge-light">{{ $category->articles->count() }} </span>
       </button>
+      </a>
       @endforeach
    </div>
 </div>
@@ -18,9 +20,11 @@
    </div>
    <div class="tags_list">
       @foreach($tags as $tag)
+      <a href="{{ route('dashboard.search.tag', $tag->name) }}">
       <button type="button" class="btn btn-primary">
      {{$tag->name}}
       </button>
+      </a>
       @endforeach
    
    </div>

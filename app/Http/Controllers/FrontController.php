@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Tag;
 use App\User;
 use App\Article;
 use App\Imagen;
@@ -36,6 +37,36 @@ class FrontController extends Controller
         $article->images;
 
         return view('dashboard.articles.vista')->with('article', $article);
+
+    }
+
+    public function searchCategory($name) {
+
+
+        $category = Category::SearchCategory($name)->first();
+        $articles = $category->articles()->paginate(4);
+        $articles->each(function($articles){
+            $articles->category;
+            $articles->images;
+        });
+
+        return view('welcome')
+            ->with('articles', $articles);
+
+    }
+
+    public function searchTag($name) {
+
+
+        $tags = Tag::SearchTag($name)->first();
+        $articles = $tags->articles()->paginate(4);
+        $articles->each(function($articles){
+            $articles->tag;
+            $articles->images;
+        });
+
+        return view('welcome')
+            ->with('articles', $articles);
 
     }
 
