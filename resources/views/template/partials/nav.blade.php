@@ -69,6 +69,16 @@
                      <a href="/dashboard/user">Dashboard</a>
                   </li>
                   <li>
+                     <!--<a href="/dashboard/user/{{ Auth::user()->id }}/edit">Dashboard</a>-->
+                     <a href="/dashboard/user/{{ Auth::user()->id }}/edit">Editar Perfil</a>
+                  </li>
+                  
+                  <li>
+                     <!--<a href="/dashboard/user/{{ Auth::user()->id }}/edit">Dashboard</a>-->
+                    
+                    <a href="/dashboard/user/articles/{{ Auth::user()->id }}">Mis Artículos</a>
+                  </li>
+                  <li>
                      <a href="{{ url('/logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">

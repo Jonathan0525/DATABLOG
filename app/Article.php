@@ -68,6 +68,11 @@ class Article extends Model
         return $query->where('title', 'LIKE', "%$title%");
     }
 
+    public function scopeSearchIdUser($query, $user_id)
+    {
+        return $query->where('user_id', '=', $user_id);
+    }
+
 
 
 }

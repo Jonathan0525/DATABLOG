@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Article;
+use App\Tag;
 use Laracasts\Flash\Flash;
 
 
@@ -24,8 +26,25 @@ class UserController extends Controller
     {
 
 
-        $user = User::all();
-        return view('dashboard.user.index')->with('user', $user);
+    $user = User::all();
+    return view('dashboard.user.index')->with('user', $user);
+
+
+
+    }
+
+    public function SearchIdUser(Request $request)
+    {
+
+    $article_id = Article::SearchIdUser($request->user_id)->orderBy('id', 'DES')->paginate(9);
+    $article_id->each(function($article_id){
+        $article_id->user;
+        $article_id->tags;
+    });
+    
+    return view('dashboard.user.articles')
+            ->with('article_id', $article_id);
+    
 
 
     }
@@ -124,6 +143,7 @@ class UserController extends Controller
             $file_name = $user->id . '.' . $photo->getClientOriginalExtension();
 
             Image::make($photo)->resize(144, 144)->save( public_path('/img/bg/' . $file_name));
+            
             
             
             $user->photo = $file_name;

@@ -28,6 +28,8 @@ Route::get('dashboard/articles/vista/{slug}', [
 	'uses' => 'FrontController@viewArticle'
 ]);
 
+
+
 Route::get('categories/{name}', [
 	'as' => 'dashboard.search.category',
 	'uses' => 'FrontController@searchCategory'
@@ -36,6 +38,12 @@ Route::get('categories/{name}', [
 Route::get('tags/{name}', [
 	'as' => 'dashboard.search.tag',
 	'uses' => 'FrontController@searchTag'
+]);
+
+
+Route::get('/dashboard/user/articles/{user_id}', [
+	'as' => 'dashboard.user.articles',
+	'uses' => 'UserController@SearchIdUser'
 ]);
 
 Route::get('/', [

@@ -24,6 +24,8 @@ class FrontController extends Controller
     
     return view('welcome')
 			->with('articles', $articles);
+
+    
     }
 
 

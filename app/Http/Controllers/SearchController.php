@@ -12,18 +12,10 @@ use App\Imagen;
 class SearchController extends Controller
 {
     
-    public function index(Request $request)
+    public function index()
     {
 
-    $articles = Article::SearchArticle($request->title)->orderBy('id', 'DES')->paginate(9);
-	$articles->each(function($articles){
-    	$articles->user;
-    	$articles->category;
-    });
-    
-    return view('welcome')
-			->with('articles', $articles);
-    }
+   
 
 
 
