@@ -37,19 +37,22 @@ class Article extends Model
 
     protected $fillable = ['title', 'content', 'category_id', 'user_id'];
 
-    public function category() {
+    public function category() 
+    {
 
     	return $this->belongsTo('App\Category');
 
     }
 
-    public function user() {
+    public function user() 
+    {
 
     	return $this->belongsTo('App\User');
 
     }
 
-    public function images() {
+    public function images()
+    {
 
     	return $this->hasMany('App\Imagen');
 
@@ -58,9 +61,17 @@ class Article extends Model
     public function tags () {
 
         return $this->belongsToMany('App\Tag');
+    }
 
+    public function scopeSearchArticle($query, $title)
+    {
+        return $query->where('title', 'LIKE', "%$title%");
     }
 
 
-     
+
 }
+
+
+     
+

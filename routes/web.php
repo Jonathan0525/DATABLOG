@@ -38,7 +38,15 @@ Route::get('tags/{name}', [
 	'uses' => 'FrontController@searchTag'
 ]);
 
+Route::get('/', [
+	'as' => 'welcome',
+	'uses' => 'FrontController@searchArticle'
+]);
+
+
 Route::get('/template/partials/menu', 'TestController@index');
+
+//Route::get('/template/partials/nav', 'SearchController@index');
 
 
 

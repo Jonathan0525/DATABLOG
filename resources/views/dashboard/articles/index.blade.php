@@ -13,6 +13,30 @@
 
          <h3>Articulos</h3>
 
+         <table class="table table-striped">
+            <thead>
+               <th>ID</th>
+               <th>Nombre</th>
+               <th>Acción</th>
+            </thead>
+            <tbody>
+               @foreach($articles as $article)
+                  <tr>
+                     <td>{{ $article->id }}</td>
+                     <td>{{ $article->title }}</td>
+                     <td>
+
+                     
+
+
+                     </td>
+                  </tr>
+               @endforeach
+            </tbody>
+         </table>
+        
+           {{ $articles->links() }}
+
          
          
          </div>

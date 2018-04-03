@@ -70,6 +70,19 @@ class FrontController extends Controller
 
     }
 
+    public function searchArticle(Request $request)
+    {
+
+    $articles = Article::SearchArticle($request->title)->orderBy('id', 'DES')->paginate(9);
+    $articles->each(function($articles){
+        $articles->user;
+        $articles->category;
+    });
+    
+    return view('welcome')
+            ->with('articles', $articles);
+    }
+
 
 }
 

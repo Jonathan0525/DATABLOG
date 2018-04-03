@@ -36,10 +36,18 @@
             </li>
          </ul>
          <div class="my-2 my-lg-0 busqueda_flex">
-            <form class="form-inline mr-sm-2">
+
+
+
+            {!! Form::open(['route' => 'welcome', 'method' => 'GET', 'class' => 'form-inline mr-sm-2']) !!}
+            <!--<form class="form-inline mr-sm-2">
                <input class="form-control mr-sm-2" type="search" placeholder="Consulta un Articulo" aria-label="Search">
                <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-            </form>
+            </form>-->
+               {!! Form::text('title', null, ['class' => 'form-control mr-sm-2', 'placeholder' => 'Consulta un Articulo', 'aria-describedby' => 'search']) !!}
+               <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            {!! Form::close() !!}
+
             @if (Auth::guest())
             <ul class="navbar-nav btns">
                <li class="nav-item">

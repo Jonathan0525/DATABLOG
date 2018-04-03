@@ -16,13 +16,17 @@ class ArticlesController extends Controller
 {
     //
 
-    public function index()
+    public function index(Request $request)
     {
 
+    $articles = Article::SearchArticle($request->title)->orderBy('id', 'DES')->paginate(9);
+	$articles->each(function($articles){
+    	$articles->user;
+    	$articles->category;
+    });
     
-	return view('dashboard.articles.index');
-
-
+    return view('dashboard.articles.index')
+			->with('articles', $articles);
     }
 
 
