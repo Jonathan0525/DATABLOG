@@ -2,10 +2,19 @@
 @section('title', 'Inicio')
 @section('content')
 <div class="bc-usuarios-registresev2 no-gutters ">
-   <div class="container-fluid" >
+   <div class="container" style="top: 20px;
+    position: relative; ">
 
    
-      <!-- <img src="{{ asset('img/bg/banner.jpg') }}" class="img-fluid">-->
+
+
+   @if (Auth::guest())
+     <img src="{{ asset('img/bg/banner.jpg') }}" class="img-fluid">
+   @else
+  
+   @endif
+   
+   
     
 
 </div>

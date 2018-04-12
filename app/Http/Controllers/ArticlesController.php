@@ -8,7 +8,7 @@ use App\Category;
 use App\Tag;
 use App\Imagen;
 use App\Http\Requests\ArticleRequest;
-
+use Laracasts\Flash\Flash;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\File;
 
