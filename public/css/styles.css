@@ -1,5 +1,8 @@
 /*MIS ESTILOS*/
-
+.info-box {
+    margin: 0px;
+    padding: 0px;
+}
 .btn-info {
     color: #fff;
     background-color: #003253;
@@ -574,6 +577,8 @@ form.myformeditor {
     background: url(../img/bg/bg-user-dashboard.jpg);
     background-size: cover;
     background-position: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .footer1 ul li a svg {

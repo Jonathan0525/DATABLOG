@@ -58,7 +58,7 @@ Route::get('/template/partials/menu', 'TestController@index');
 
 
 
-Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function(){
+Route::group(['middleware' => ['auth', 'users'], 'prefix' => 'dashboard'], function(){
 
 	Route::resource('user','UserController');
 	Route::resource('categories','CategoriesController');

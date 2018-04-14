@@ -18,6 +18,7 @@ use App\Http\Requests;
 
 
 
+
 class UserController extends Controller
 {
 
@@ -36,7 +37,7 @@ class UserController extends Controller
     public function SearchIdUser(Request $request)
     {
 
-    $article_id = Article::SearchIdUser($request->user_id)->orderBy('id', 'DES')->paginate(9);
+    $article_id = Article::SearchIdUser($request->user_id)->orderBy('id', 'DES')->paginate();
     $article_id->each(function($article_id){
         $article_id->user;
         $article_id->tags;
