@@ -31,7 +31,7 @@
                </td>
                <td>
                   <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                  <a href="" onclick="return confirm('Seguro que deseas eliminar este tag?')" class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
+                   <a href="{{ route('dashboard.articles.destroy', $article->id) }}" onclick="return confirm('Seguro que deseas eliminar este artículo?')" class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
                </td>
             </tr>
             @endforeach

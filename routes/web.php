@@ -71,6 +71,11 @@ Route::group(['middleware' => ['auth', 'users'], 'prefix' => 'dashboard'], funct
 	]);
 
 	Route::resource('articles', 'ArticlesController');
+	Route::get('articles/{id}/destroy', [
+		'uses'  => 'ArticlesController@destroy',
+		'as'	=> 'dashboard.articles.destroy'
+
+	]);
 
 });
 

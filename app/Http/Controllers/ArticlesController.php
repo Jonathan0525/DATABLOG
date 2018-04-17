@@ -101,11 +101,15 @@ class ArticlesController extends Controller
 
     public function destroy($id)
     {
+        $article = Article::find($id);
         $tag = Tag::find($id);
-        $tag->delete();
+        $article->tags()->detach($tag);
+        $article->delete();
 
-        flash('El tag "'. $tag->name . '" ha sido borrado')->warning();
-		return redirect()->route('tags.index');
+    
+
+        flash('El Artículo "'. $article->title . '" ha sido borrado')->warning();
+		return redirect()->route('user.index');
 
     }
 }
